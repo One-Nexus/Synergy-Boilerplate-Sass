@@ -1,4 +1,5 @@
 export default (theme) => ({
+    name: 'MyModule',
     gutter: '1em',
 
     'font-family': 'sans-serif',

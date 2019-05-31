@@ -1,4 +1,5 @@
 export default (theme) => ({
+    gutter: '1em',
     colors: {
         primary: 'dodgerblue',
         secondary: 'deepskyblue',
@@ -8,7 +9,7 @@ export default (theme) => ({
     modules: {
         MyModule: {
             'modifier(highlight)': {
-                heading: {
+                'component(heading)': {
                     'background-color': () => theme.colors.tertiary,
                     'border-color': () => theme.colors.quaternary
                 }

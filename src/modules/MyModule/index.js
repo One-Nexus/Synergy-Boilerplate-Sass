@@ -1,5 +1,5 @@
+import './layout';
 import interactions from './interactions';
-import layout from './layout';
 import defaults from './config';
 
 const MyModule = ({ title, content, dismiss, ...props }) => (
@@ -13,7 +13,7 @@ const MyModule = ({ title, content, dismiss, ...props }) => (
 );
 
 export default Object.assign(MyModule, {
-    ...interactions, layout, defaults, defaultProps: {
+    ...interactions, defaults, defaultProps: {
         name: 'MyModule'
     }
 });

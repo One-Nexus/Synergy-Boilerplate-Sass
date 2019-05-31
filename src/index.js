@@ -1,6 +1,10 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
 import '@onenexus/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
+
+Object.assign(window, { React, ReactDOM });
 
 const App = ({ modules, theme }) => {
     Synergy.theme(modules, theme);

@@ -1,20 +1,20 @@
 {
-  "name": "@onenexus/synergy-boilerplate",
+  "name": "@onenexus/synergy-boilerplate-sass",
   "version": "1.0.0-beta.0",
-  "description": "A boilerplate for the Synergy framework designed to be simple starting point for Synergy projects",
+  "description": "A boilerplate for the Synergy framework using Sass for styling instead of JavaScript",
   "main": "dist/app.js",
   "author": "(Edmund Reed)[http://twitter.com/esr360] <esr360@live.com>",
-  "homepage": "https://github.com/One-Nexus/Synergy-Boilerplate",
+  "homepage": "https://github.com/One-Nexus/Synergy-Boilerplate-Sass",
   "bugs": {
-    "url": "https://github.com/One-Nexus/Synergy-Boilerplate/issues"
+    "url": "https://github.com/One-Nexus/Synergy-Boilerplate-Sass/issues"
   },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/One-Nexus/Synergy-Boilerplate.git"
+    "url": "https://github.com/One-Nexus/Synergy-Boilerplate-Sass.git"
   },
   "dependencies": {
-    "@onenexus/synergy": "4.0.0-beta.3",
+    "@onenexus/synergy": "4.0.0-beta.6",
     "react": "^16.4.0",
     "react-dom": "^16.4.0"
   },
@@ -23,8 +23,15 @@
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
     "@babel/register": "^7.0.0",
+    "autoprefixer": "^9.5.1",
     "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
+    "node-sass": "^4.12.0",
+    "postcss-loader": "^3.0.0",
     "react-hot-loader": "^4.8.8",
+    "sass-loader": "^7.1.0",
+    "sass-resources-loader": "^2.0.1",
+    "style-loader": "^0.23.1",
     "webpack": "^4.28.4",
     "webpack-cli": "^3.2.1",
     "webpack-dev-server": "^3.4.1"
