@@ -42,6 +42,6 @@
   },
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.babel.js --mode development",
-    "build": "webpack"
+    "build": "webpack --mode production"
   }
 }

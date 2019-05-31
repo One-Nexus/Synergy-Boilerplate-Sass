@@ -3,16 +3,18 @@
 [![npm version](https://badge.fury.io/js/Synergy.svg)](https://badge.fury.io/js/Synergy)
 [![npm version](https://img.shields.io/npm/dm/synergy.svg)](https://badge.fury.io/js/Synergy)
 
-<img height="56px" src="http://www.onenexus.io/synergy/github-logo.png" />
+<a href="https://github.com/One-Nexus/Synergy">
+    <img height="56px" src="http://www.onenexus.io/synergy/github-logo.png" />
+</a>
 
 > Synergy is a framework for building modular, configurable and scalable UI components for React-DOM projects
 
-###### Features
+###### Boilerplate Features
 
-* Make cosmetic UI updates to your app without modifying source code ([learn more](https://github.com/One-Nexus/Synergy/wiki/Module-Configuration#apply-cosmetic-css-via-configuration))
-* Easily configure modules and create themes for your app ([learn more](https://github.com/One-Nexus/Synergy/wiki/Themes))
-* Add UI interactions without requiring class components, hooks or state ([learn more](https://github.com/One-Nexus/Synergy/wiki/Interactions))
-* Everything you need to create component libraries/UI styleguides
+* Includes React, ReactDOM and the Synergy framework
+* Includes [Autoprefixer](https://github.com/postcss/autoprefixer)
+* Includes Babel transpilation
+* Easy dev environment with webpack-dev-server and hot-reloading
 
 ## Setup
 
@@ -40,14 +42,6 @@ Access the devlopment server in the browser (default port is 8080, so visit http
 
 To bundle your application, run `npm run build`. The application bundle will be created at `./dist/app.js`.
 
-## Build/Compile
-
-> Generate a bundle to `dist/app.js`
-
-```bash
-npm run build
-```
-
 ## Tips & Info
 
-* In order to avoid having to import Cell and your project's theme in to every module, this boilerplate uses [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) allowing you to provide them both to all modules through your project's [Webpack configuration](#TODO). Cell and your project's theme are imported into [`index.scss`](#TODO) which is supplied to sass-resources-loader.
+* In order to avoid having to import [Cell](#TODO) and your project's theme in to every module, this boilerplate uses [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) allowing you to provide them both to all modules through your project's [Webpack configuration](#TODO). Cell and your project's theme are imported into [`index.scss`](#TODO) which is supplied to sass-resources-loader.

@@ -6,7 +6,7 @@ import theme from './themes/myTheme';
 
 Object.assign(window, { React, ReactDOM });
 
-const App = ({ modules, theme }) => {
+const App = () => {
     Synergy.theme(modules, theme);
 
     return (
@@ -21,8 +21,6 @@ const App = ({ modules, theme }) => {
         </React.Fragment>
     )
 }
-
-App.defaultProps = { theme, modules };
 
 ReactDOM.render(<App />, document.getElementById('root'));
 
