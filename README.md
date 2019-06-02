@@ -44,7 +44,7 @@ To bundle your application, run `npm run build`. The application bundle will be 
 
 ## Tips & Info
 
-* In order to avoid having to import [Cell](https://github.com/One-Nexus/Cell) and your project's theme in to every module, this boilerplate uses [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) allowing you to provide them both to all modules through your project's [Webpack configuration](https://github.com/One-Nexus/Cell). Cell and your project's theme are imported into [`index.scss`](https://github.com/One-Nexus/Synergy-Boilerplate-Sass/blob/master/src/index.scss) which is supplied to sass-resources-loader.
+* In order to avoid having to import [Cell](https://github.com/One-Nexus/Cell) and your project's theme in to every module, this boilerplate uses [sass-resources-loader](https://github.com/shakacode/sass-resources-loader) allowing you to provide them both to all modules through your project's [Webpack configuration](https://github.com/One-Nexus/Synergy-Boilerplate-Sass/blob/master/webpack.config.babel.js#L50). Cell and your project's theme are imported into [`index.scss`](https://github.com/One-Nexus/Synergy-Boilerplate-Sass/blob/master/src/index.scss) which is supplied to sass-resources-loader.
 
 ---
 
