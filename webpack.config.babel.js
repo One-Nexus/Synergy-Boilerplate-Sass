@@ -27,7 +27,7 @@ export default () => ({
             {
                 test: /\.(js|jsx)$/,
                 exclude: /node_modules/,
-                use: 'babel-loader',
+                loader: 'babel-loader',
                 resolve: {
                     extensions: ['.js', '.jsx', '.scss']
                 }

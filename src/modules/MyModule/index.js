@@ -1,6 +1,6 @@
 import './layout';
 import interactions from './interactions';
-import defaults from './config';
+import config from './config';
 
 const MyModule = ({ title, content, dismiss, ...props }) => (
     <Module { ...props }>
@@ -12,8 +12,6 @@ const MyModule = ({ title, content, dismiss, ...props }) => (
     </Module>
 );
 
-export default Object.assign(MyModule, {
-    ...interactions, defaults, defaultProps: {
-        name: 'MyModule'
-    }
-});
+MyModule.defaultProps = { name: 'MyModule' };
+
+export default Object.assign(MyModule, { config });
