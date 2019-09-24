@@ -1,0 +1,42 @@
+@include module('accordion') {
+  font-family: sans-serif;
+
+  @include component('heading') {
+    background-color: #1E90FF;
+    color: #005A9C;
+    padding: 1em;
+    cursor: pointer;
+  
+    &:hover {
+      background-color: #01BFFF;
+      color: #FFFFFF;
+    }
+
+    @include context('panel', 'open') {
+      background-color: #00FFB2;
+      color: #FFFFFF;
+    }
+  }
+
+  @include component('content') {
+    padding: 1em;
+    color: #444444;
+    display: none;
+
+    @include context($module, ':hover') {
+      background: blue;
+    }
+
+    // @include context('panel') {
+    //   @debug &;
+    // }
+
+    @include context('panel', 'open') {
+      display: block;
+
+      @include context(('foo', 'bar'), ('alpha', ':hover')) {
+        content: fizz;
+      }
+    }
+  }
+}

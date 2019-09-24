@@ -1,0 +1,33 @@
+@import 'config.js';
+
+@include module {
+  margin-bottom: this('gutter');
+
+  @media (min-width: theme('breakpoints', 'small')) {
+    display: inline-block;
+    width: calc(50vw - #{this('gutter')});
+    margin-bottom: 0;
+
+    &:not(:first-child) {
+      margin-left: this('gutter');
+    }
+  }
+
+  @include modifier('isDismissed') {
+    display: none;
+  }
+
+  @include component('content') {
+    z-index: 0;
+    margin-top: -#{this('content', 'border-width')};
+  }
+
+  @include component('close') {
+    float: right;
+    cursor: pointer;
+  }
+
+  @include group {
+    margin-bottom: this('gutter');
+  }
+}

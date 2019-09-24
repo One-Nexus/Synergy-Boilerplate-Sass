@@ -1,19 +1,42 @@
 export default (theme) => ({
-    gutter: '1em',
-    colors: {
-        primary: 'dodgerblue',
-        secondary: 'deepskyblue',
-        tertiary: 'limegreen',
-        quaternary: 'green'
+  colors: {
+    primary: 'dodgerblue',
+    secondary: 'deepskyblue',
+    tertiary: 'limegreen',
+    quaternary: 'green'
+  },
+  breakpoints: {
+    small: '640px',
+    medium: '960px',
+    large: '1200px'
+  },
+  modules: {
+    accordion: {
+      background: 'red'
     },
-    modules: {
-        MyModule: {
-            'modifier(highlight)': {
-                'component(heading)': {
-                    'background-color': () => theme.colors.tertiary,
-                    'border-color': () => theme.colors.quaternary
-                }
-            }
-        }
+    MyModule: {
+      // 'is-highlight': {
+      //   title: {
+      //     'background-color': () => theme.colors.tertiary,
+      //     'border-color': () => theme.colors.quaternary
+      //   }
+      // }
+      title: {
+        // 'block-is-highlight': {
+        //   'background-color': () => theme.colors.tertiary,
+        //   'border-color': () => theme.colors.quaternary
+        // },
+        'with-highlight': {
+          'background-color': () => theme.colors.tertiary,
+          'border-color': () => theme.colors.quaternary
+        },
+        // 'panel-is-foo': {
+        //   color: 'green'
+        // },
+        // 'within-panel': {
+        //   color: 'blue'
+        // },
+      }
     }
-})
+  }
+});

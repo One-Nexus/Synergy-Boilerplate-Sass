@@ -1,17 +1,20 @@
-import './layout';
-import interactions from './interactions';
+import './styles';
 import config from './config';
 
-const MyModule = ({ title, dismiss, ...props }) => (
-    <Module { ...props }>
-        <Component name='heading'>
-            {title} {dismiss && <Component name='close' onClick={interactions.dismiss}>✖</Component>}
-        </Component>
+const MyModule = ({ title, dismiss, ...props }) => {
+  const [isDismissed, setDismiss] = useState(false);
 
-        <Component name='content'>{props.children}</Component>
+  return (
+    <Module isDismissed={isDismissed} {...props}>
+      <Component name='title'>
+        {title} {dismiss && <Component name='close' onClick={() => setDismiss(true)}>✖</Component>}
+      </Component>
+
+      <Component name='content'>{props.children}</Component>
     </Module>
-);
+  );
+}
 
-MyModule.defaultProps = { name: 'MyModule' };
+MyModule.defaultProps = { name: 'MyModule' }
 
 export default Object.assign(MyModule, { config });
