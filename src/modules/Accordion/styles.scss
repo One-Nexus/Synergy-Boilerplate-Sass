@@ -1,4 +1,4 @@
-@include module('accordion') {
+@include module('Accordion') {
   font-family: sans-serif;
 
   @include component('heading') {
@@ -7,7 +7,7 @@
     padding: 1em;
     cursor: pointer;
   
-    &:hover {
+    @include hover {
       background-color: #01BFFF;
       color: #FFFFFF;
     }
@@ -23,20 +23,8 @@
     color: #444444;
     display: none;
 
-    @include context($module, ':hover') {
-      background: blue;
-    }
-
-    // @include context('panel') {
-    //   @debug &;
-    // }
-
     @include context('panel', 'open') {
       display: block;
-
-      @include context(('foo', 'bar'), ('alpha', ':hover')) {
-        content: fizz;
-      }
     }
   }
 }

@@ -1,4 +1,4 @@
-export default (theme) => ({
+export default {
   colors: {
     primary: 'dodgerblue',
     secondary: 'deepskyblue',
@@ -11,32 +11,13 @@ export default (theme) => ({
     large: '1200px'
   },
   modules: {
-    accordion: {
-      background: 'red'
-    },
     MyModule: {
-      // 'is-highlight': {
-      //   title: {
-      //     'background-color': () => theme.colors.tertiary,
-      //     'border-color': () => theme.colors.quaternary
-      //   }
-      // }
       title: {
-        // 'block-is-highlight': {
-        //   'background-color': () => theme.colors.tertiary,
-        //   'border-color': () => theme.colors.quaternary
-        // },
         'with-highlight': {
-          'background-color': () => theme.colors.tertiary,
-          'border-color': () => theme.colors.quaternary
-        },
-        // 'panel-is-foo': {
-        //   color: 'green'
-        // },
-        // 'within-panel': {
-        //   color: 'blue'
-        // },
+          'background-color': theme => theme.colors.tertiary,
+          'border-color': theme => theme.colors.quaternary
+        }
       }
     }
   }
-});
+}
