@@ -9,7 +9,6 @@ export default () => ({
   output: {
     path: path.resolve(__dirname, 'dist/'),
     filename: 'app.js',
-    publicPath: '/',
     libraryTarget: 'umd'
   },
 
@@ -18,7 +17,6 @@ export default () => ({
   ],
 
   devServer: {
-    contentBase: './',
     hot: true
   },
 
@@ -37,18 +35,27 @@ export default () => ({
         use: [
           'style-loader', 
           'css-loader',
-          {loader: 'postcss-loader', options: {
-            sourceMap: true,
-            plugins: () => [Autoprefixer]
-          }},
-          {loader: 'sass-loader', options: {
-            sourceMap: true,
-            importer: SynergySassImporter,
-            outputStyle: 'expanded'
-          }},
-          {loader: 'sass-resources-loader', options: {
-            resources: './src/index.scss',
-          }}
+          {
+            loader: 'postcss-loader', 
+            options: {
+              sourceMap: true,
+              plugins: () => [Autoprefixer]
+            }
+          },
+          {
+            loader: 'sass-loader', 
+            options: {
+              sourceMap: true,
+              importer: SynergySassImporter,
+              outputStyle: 'expanded'
+            }
+          },
+          {
+            loader: 'sass-resources-loader', 
+            options: {
+              resources: './src/index.scss',
+            }
+          }
         ]
       },
       {

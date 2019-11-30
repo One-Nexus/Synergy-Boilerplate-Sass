@@ -12,7 +12,7 @@
       color: #FFFFFF;
     }
 
-    @include context('panel', 'open') {
+    @include context(($this, 'panel'), 'open') {
       background-color: #00FFB2;
       color: #FFFFFF;
     }
@@ -21,10 +21,6 @@
   @include component('content') {
     padding: 1em;
     color: #444444;
-    display: none;
-
-    @include context('panel', 'open') {
-      display: block;
-    }
+    @include show(($this, 'panel'), 'open');
   }
 }
