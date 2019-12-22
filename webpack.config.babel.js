@@ -3,7 +3,7 @@ import SynergySassImporter from '@onenexus/synergy-sass-importer';
 
 export default () => ({
   entry: './src/index.js',
-      
+
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
   },
