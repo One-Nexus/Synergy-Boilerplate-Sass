@@ -1,4 +1,4 @@
-@import 'config.js';
+@import './config.js';
 
 @include module {
   margin-bottom: this('gutter');

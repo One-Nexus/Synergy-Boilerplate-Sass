@@ -1,23 +1,11 @@
-import path from 'path';
-import webpack from 'webpack';
 import Autoprefixer from 'autoprefixer';
 import SynergySassImporter from '@onenexus/synergy-sass-importer';
 
 export default () => ({
   entry: './src/index.js',
-
-  output: {
-    path: path.resolve(__dirname, 'dist/'),
-    filename: 'app.js',
-    libraryTarget: 'umd'
-  },
-
-  plugins: [
-    new webpack.HotModuleReplacementPlugin()
-  ],
-
-  devServer: {
-    hot: true
+      
+  resolve: {
+    extensions: ['.js', '.jsx', '.json', '.scss']
   },
 
   module: {
@@ -25,10 +13,7 @@ export default () => ({
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        loader: 'babel-loader',
-        resolve: {
-          extensions: ['.js', '.jsx', '.scss']
-        }
+        loader: 'babel-loader'
       },
       {
         test: /\.scss$/,
@@ -38,16 +23,16 @@ export default () => ({
           {
             loader: 'postcss-loader', 
             options: {
-              sourceMap: true,
               plugins: () => [Autoprefixer]
             }
           },
           {
             loader: 'sass-loader', 
             options: {
-              sourceMap: true,
-              importer: SynergySassImporter,
-              outputStyle: 'expanded'
+              sassOptions: {
+                importer: SynergySassImporter,
+                outputStyle: 'expanded',
+              }
             }
           },
           {
@@ -57,10 +42,6 @@ export default () => ({
             }
           }
         ]
-      },
-      {
-        test: /\.css$/,
-        use: ['style-loader', 'css-loader']
       }
     ]
   }

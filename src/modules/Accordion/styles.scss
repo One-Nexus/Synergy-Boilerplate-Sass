@@ -21,6 +21,6 @@
   @include component('content') {
     padding: 1em;
     color: #444444;
-    @include show(($this, 'panel'), 'open');
+    @include display((($this, 'panel'), 'open'), block, none);
   }
 }
