@@ -1,6 +1,7 @@
 import React, { useState, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import { Container } from '@onenexus/synergy';
+// import { Container } from '@onenexus/synergy';
+import { Container } from '../../Synergy/dist/synergy';
 import * as modules from './modules';
 import theme from './themes/myTheme';
 

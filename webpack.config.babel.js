@@ -2,8 +2,6 @@ import Autoprefixer from 'autoprefixer';
 import SynergySassImporter from '@onenexus/synergy-sass-importer';
 
 export default () => ({
-  entry: './src/index.js',
-
   resolve: {
     extensions: ['.js', '.jsx', '.json', '.scss']
   },
@@ -11,7 +9,7 @@ export default () => ({
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader'
       },
