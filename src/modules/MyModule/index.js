@@ -1,10 +1,11 @@
 import './styles';
+import config from './config';
 
 const MyModule = ({ title, dismiss, ...props }) => {
   const [isDismissed, setDismiss] = useState(false);
 
   return (
-    <Module name='MyModule' isDismissed={isDismissed} {...props}>
+    <Module isDismissed={isDismissed} {...props}>
       <Component name='title'>
         {title} {dismiss && <Component name='close' onClick={() => setDismiss(true)}>✖</Component>}
       </Component>
@@ -13,5 +14,7 @@ const MyModule = ({ title, dismiss, ...props }) => {
     </Module>
   );
 }
+
+MyModule.defaultProps = { name: 'MyModule', config }
 
 export default MyModule;
