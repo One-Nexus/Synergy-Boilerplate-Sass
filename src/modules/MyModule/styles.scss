@@ -13,7 +13,7 @@
     }
   }
 
-  @include is('isDismissed') {
+  @include is('dismissed') {
     display: none;
   }
 

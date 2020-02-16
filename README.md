@@ -16,6 +16,8 @@
 * Includes Babel transpilation
 * Easy dev environment with webpack-dev-server and hot-reloading
 
+> [View this boilerplate on CodeSandbox](https://codesandbox.io/s/synergy-demo--sass-ri8vt)
+
 ## Setup
 
 1. Clone the repository and then navigate into the cloned directory
